@@ -165,6 +165,23 @@
         backdrop-filter: saturate(180%) blur(12px);
         border-bottom: 1px solid rgba(42, 10, 74, 0.07);
       }
+      @media (max-width: 768px) {
+        header.site {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: transparent;
+          backdrop-filter: none;
+          border-bottom: none;
+        }
+        header.site .nav .btn {
+          display: none;
+        }
+        header.site .nav img {
+          filter: brightness(0) invert(1);
+        }
+      }
       .nav {
         display: flex;
         align-items: center;
@@ -417,6 +434,11 @@
         }
         .floaty {
           left: 0;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero {
+          padding-top: 100px;
         }
       }
       @media (max-width: 560px) {
