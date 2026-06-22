@@ -1181,15 +1181,33 @@
         font-weight: 800;
         font-size: 0.72rem;
       }
+      .sticky-cta .price {
+        flex: 0 0 auto;
+      }
       .sticky-cta .btn {
-        padding: 14px 20px;
-        font-size: 0.96rem;
+        padding: 13px 18px;
+        font-size: 0.92rem;
         white-space: nowrap;
-        flex: none;
+        flex: 0 1 auto;
       }
       @media (max-width: 768px) {
         .sticky-cta {
           display: flex;
+          gap: 10px;
+          padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        }
+        .sticky-cta .btn {
+          padding: 12px 14px;
+          font-size: 0.88rem;
+        }
+      }
+      @media (max-width: 360px) {
+        .sticky-cta .price b {
+          font-size: 1.2rem;
+        }
+        .sticky-cta .btn {
+          padding: 12px 12px;
+          font-size: 0.82rem;
         }
       }
 
@@ -1669,10 +1687,10 @@
             <div class="plan">Acesso Anual Revendi</div>
             <div class="price-amount">
               <span class="cur">R$</span>
-              <span class="num">349,90</span>
+              <span class="num">349,99</span>
               <span class="per">/ano</span>
             </div>
-            <div class="price-install">ou até 6x sem juros</div>
+            <div class="price-install">ou em até 12x no cartão</div>
             <div class="per-day">Menos de R$ 1 por dia</div>
           </div>
           <div class="price-body">
@@ -1793,13 +1811,13 @@
 
     <div class="sticky-cta" id="stickyCta" aria-hidden="true">
       <div class="price">
-        <b>R$ 349,90</b>
-        <small>ou até 6x sem juros</small>
+        <b>R$ 349,99</b>
+        <small>ou em até 12x no cartão</small>
       </div>
       <a
         class="btn btn-primary checkout-link"
         href="https://pay.cakto.com.br/8xez39i_937655"
-        >Quero organizar minha revenda</a
+        >Garantir acesso</a
       >
     </div>
 
