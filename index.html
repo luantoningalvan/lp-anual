@@ -301,6 +301,23 @@
         align-items: center;
         margin-top: 26px;
       }
+      .hero-sub {
+        margin-top: 14px;
+        color: #cdb9ec;
+        font-weight: 800;
+        font-size: 0.92rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+      }
+      .hero-sub span {
+        white-space: nowrap;
+      }
+      .hero-sub b {
+        color: var(--yellow);
+        font-weight: 900;
+        margin-right: 4px;
+      }
       .hero-trust {
         margin-top: 26px;
         display: flex;
@@ -602,6 +619,30 @@
         }
       }
 
+      .video-sec {
+        background: #fff;
+        padding-bottom: 0;
+      }
+      .video-frame {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        border: 1px solid var(--lilac-200);
+        background: #000;
+        aspect-ratio: 9 / 16;
+        max-height: 80vh;
+      }
+      .video-frame iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+
       .steps {
         background: #fff;
       }
@@ -781,6 +822,12 @@
         }
       }
 
+      .mid-cta {
+        background: linear-gradient(160deg, var(--grape-900), var(--grape-950));
+        padding-top: 0;
+        text-align: center;
+      }
+
       .proof {
         background: #fff;
       }
@@ -819,6 +866,53 @@
 
       .tmoni {
         background: #fff;
+      }
+      .store-ratings {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 22px;
+      }
+      .store-rating {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--lilac-50);
+        border: 1px solid var(--lilac-200);
+        border-radius: 16px;
+        padding: 14px 22px;
+        box-shadow: var(--shadow-sm);
+      }
+      .store-rating .store {
+        display: block;
+        font-weight: 900;
+        color: var(--grape-800);
+        font-size: 0.86rem;
+      }
+      .store-rating .score {
+        font-family: var(--font-display);
+        font-optical-sizing: auto;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--coral-600);
+        letter-spacing: -1px;
+      }
+      .store-rating .meta {
+        text-align: left;
+        line-height: 1.25;
+      }
+      .store-rating .meta .rstars {
+        color: var(--yellow);
+        letter-spacing: 1px;
+        font-size: 0.95rem;
+      }
+      .store-rating .meta small {
+        display: block;
+        color: var(--muted);
+        font-weight: 800;
+        font-size: 0.82rem;
       }
       .tmoni-grid {
         display: grid;
@@ -884,6 +978,35 @@
           max-width: 540px;
           margin: 0 auto;
         }
+      }
+
+      .print-mosaic {
+        columns: 3 300px;
+        column-gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .print-card {
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        margin: 0 0 20px;
+        background: #fff;
+        border: 1px solid var(--lilac-200);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition:
+          box-shadow 0.18s ease,
+          border-color 0.18s ease;
+      }
+      .print-card:hover {
+        box-shadow: var(--shadow-lg);
+        border-color: var(--lilac-300);
+      }
+      .print-card img {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       .pricing {
@@ -1342,9 +1465,15 @@
             <a
               class="btn btn-primary btn-lg checkout-link"
               href="https://pay.cakto.com.br/8xez39i_937655"
-              >Quero organizar minha revenda</a
+              >Começar agora — 30 dias para testar</a
             >
             <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+          </div>
+
+          <div class="hero-sub">
+            <span><b>✓</b>Acesso imediato</span>
+            <span><b>✓</b>30 dias de garantia</span>
+            <span><b>✓</b>Suporte incluso</span>
           </div>
 
           <div class="hero-trust">
@@ -1435,7 +1564,26 @@
       </div>
     </section>
 
-    <section class="steps" id="como-funciona">
+    <section class="video-sec" id="como-funciona">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">Veja na prática</div>
+          <h2 class="title">Veja como funciona na prática</h2>
+        </div>
+        <div class="video-frame reveal">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/oFNeKDk6HZ8?rel=0&modestbranding=1&playsinline=1&iv_load_policy=3"
+            title="Veja o Revendi na prática"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
       <div class="wrap">
         <div class="section-head reveal">
           <div class="kicker">Como funciona</div>
@@ -1603,6 +1751,16 @@
       </div>
     </section>
 
+    <section class="mid-cta" id="midCta">
+      <div class="wrap">
+        <a
+          class="btn btn-primary btn-lg reveal checkout-link"
+          href="https://pay.cakto.com.br/8xez39i_937655"
+          >Quero saber o que está entrando e saindo</a
+        >
+      </div>
+    </section>
+
     <section class="proof">
       <div class="wrap">
         <div class="section-head reveal">
@@ -1632,96 +1790,117 @@
         <div class="section-head reveal">
           <div class="kicker">Depoimentos</div>
           <h2 class="title">Quem usa, recomenda</h2>
-          <p>Avaliações reais de revendedores na Google Play.</p>
+          <p>Avaliações reais de revendedores na Google Play e App Store.</p>
+          <div class="store-ratings reveal">
+            <div class="store-rating">
+              <div class="score">4,7</div>
+              <div class="meta">
+                <span class="store">Google Play</span>
+                <div class="rstars">★★★★★</div>
+                <small>186 avaliações</small>
+              </div>
+            </div>
+            <div class="store-rating">
+              <div class="score">4,9</div>
+              <div class="meta">
+                <span class="store">App Store</span>
+                <div class="rstars">★★★★★</div>
+                <small>51 avaliações</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tmoni-grid">
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “No momento de correria que vivo, foi uma mão na roda. Controla
-              todas as minhas vendas de uma forma prática e não me deixa tomar
-              prejuízo.”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: #7c3aed">D</div>
-              <div>
-                <div class="tname">Daliana Silva</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+        <div class="print-mosaic">
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-00.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
           </div>
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “Melhor aplicativo, estou muito feliz. Até que enfim consigo
-              deixar meu estoque organizado, todas as marcas em um só lugar.”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: var(--coral-600)">E</div>
-              <div>
-                <div class="tname">Eliane da Silva</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-01.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
           </div>
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “Estou usando e finalmente encontrei um aplicativo que atende às
-              minhas necessidades. Gestão de vendas, estoque e clientes.
-              Parabéns!”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: #169b62">C</div>
-              <div>
-                <div class="tname">Cleide Moraes Consultora</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-02.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
           </div>
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “É um aplicativo excelente! Está atendendo bem às minhas demandas
-              e organizando meu estoque e vendas em geral. Estou amando! Sem
-              falar que tem um suporte bem rápido!”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: #0ea5e9">F</div>
-              <div>
-                <div class="tname">Flavia Gama</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-03.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
           </div>
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “App maravilhoso. Supriu todas as minhas necessidades. Se eu
-              soubesse da existência desse app, tinha migrado para cá antes. Ele
-              é excelente! E o suporte é sensacional também.”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: #d97706">R</div>
-              <div>
-                <div class="tname">Richi Lasch - Gv Jequiti</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-04.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
           </div>
-          <div class="tcard reveal">
-            <div class="tstars">★★★★★</div>
-            <p class="ttext">
-              “O aplicativo mais completo que encontrei para meu negócio.
-              Organizado demais e bastante útil em todas as funções!”
-            </p>
-            <div class="twho">
-              <div class="tavatar" style="background: #db2777">S</div>
-              <div>
-                <div class="tname">Sarah Estefane</div>
-                <div class="tsrc">★ Avaliação na Google Play</div>
-              </div>
-            </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-05.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-06.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-07.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-08.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-09.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-10.png"
+              alt="Avaliação na Google Play"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-11.jpg"
+              alt="Avaliação na App Store"
+              loading="lazy"
+            />
+          </div>
+          <div class="print-card">
+            <img
+              src="assets/depoimentos/depo-12.jpg"
+              alt="Avaliação na App Store"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -1863,7 +2042,7 @@
         <a
           class="btn btn-primary btn-lg reveal checkout-link"
           href="https://pay.cakto.com.br/8xez39i_937655"
-          >Quero organizar minha revenda</a
+          >Garantir meu acesso com 30 dias de garantia</a
         >
       </div>
     </section>
@@ -1921,6 +2100,7 @@
       const sticky = document.getElementById("stickyCta");
       const hero = document.querySelector(".hero");
       const hideZones = [
+        document.getElementById("midCta"),
         document.getElementById("planos"),
         document.querySelector(".final"),
         document.querySelector("footer.site"),
